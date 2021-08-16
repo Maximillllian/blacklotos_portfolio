@@ -1,0 +1,66 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}Black, black Lotos...{% endblock  %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock  %}
+
+{% block content %}
+    <footer class="first-view">
+        <!-- {% include './block/preloader.html' %}  -->
+        <div class="container-slide slide">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <figure class="slide-ava ava move-border in-shadow">
+                        <svg>
+                            <image xlink:href="{% static './img/ava_restraunt.JPG' %}" height="90%" width="90%" x="5%" y="5%" />
+                            <line class="top" x1="0%" y1="0%" x2="300%" y2="0%"/>
+                            <line class="right" x1="100%" y1="100%" x2="100%" y2="-300%"/>
+                            <line class="bottom" x1="100%" y1="100%" x2="-200%" y2="100%"/>
+                            <line class="left" x1="0%" y1="0%" x2="0%" y2="400%"/>
+                        </svg>
+                    </figure>
+                    <!-- <figure class="ava-slide in-shadow">
+                        <img src="{% static 'img/ava_restraunt.JPG' %}" alt="">
+                    </figure> -->
+                </div>
+                <div class="col-xl-8 col-xl-offset-0 col-lg-7 col-lg-offset-1 col-md-6 col-sm-6 col-xs-12">
+                    <div class="slide-description">
+                        <h2>Привет! <br> Меня зовут Макс, я занимаюсь аналитикой, машинным обучением, версткой сайтов и музыкой.</h2>
+                            <nav class="slide-nav">
+                                <button class="in-darkness"><a href="">Портфолио</a></button>
+                                <button class="in-darkness"><a href="">Навыки</a></button>
+                                <button class="fade-in"><a href="">Не кликай!</a></button>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lotos-tag in-darkness">
+            <div class="designed-by">Designed by</div>
+            <div class="black-lotos"><span class="black">Black</span> <span class="lotos">Lotos</span></div>
+        </div>
+    </footer>
+    <main class="in-darkness border-out">
+        <aside>
+            <figure class="aside-ava in-shadow">
+                <img src="{% static './img/ava-cool.jpg' %}" alt="">
+            </figure>
+        </aside>
+        <article>
+            <section class="skills">
+                ХЕЙ ХЕЙ ЙОУ
+            </section>
+        </article>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+            $(document).ready(function() {
+            window.onload = function () {
+            $('.container-preloader').delay(3000).fadeOut(1000, function(){ $('.container-preloader').remove(); } );
+            }
+            });
+    </script>
+
+{% endblock  %}

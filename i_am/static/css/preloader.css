@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
+
+@keyframes loader-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes loader-out {
+    0%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.container-preloader{
+    background-color: var(--color-bg);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100501;
+}
+
+.preloader{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.8;
+    color: var(--color-main);
+    font-size: 8rem;
+    font-family: 'Exo', sans-serif;
+    
+
+    animation-name: loader-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: cubic-bezier(1, -0, .59, .79);
+}
+
+
+.preloader div{
+    /* font-size: 8rem;
+    font-family: 'Exo', sans-serif; */
+}
+
+.preloader .designed-by{
+    font-size: 2rem;
+    font-family: 'Exo', sans-serif;
+    padding-left: var(--space-xxxs);
+    align-self: start;
+
+    animation-name: loader-out;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(.73, .86, .20, 1);
+}
+
+.preloader .black-lotos{
+    font-family: 'Exo', sans-serif;
+    animation-name: loader-out;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(.73, .86, .20, 1);
+}

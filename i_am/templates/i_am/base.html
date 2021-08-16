@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock  %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap" rel="stylesheet"  media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    {% block links %}{% endblock  %}
+</head>
+<body>
+    {% block content %}{% endblock  %}
+</body>
+</html>
