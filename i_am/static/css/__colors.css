@@ -6,5 +6,6 @@
     --color-main: #fffffe;
     --color-highlight: #7f5af0;
     --color-secondary: #72757e;
+    --color-secondary-shadow: rgb(114, 117, 126, .5);
     --color-tertiary: #2cb67d;
 }

@@ -26,6 +26,7 @@ body{
 
 nav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -36,7 +37,7 @@ svg text{
 
 /* Styles */
 
-nav a{
+a{
     color: var(--color-main);
     text-decoration: none;
 }
@@ -77,11 +78,53 @@ button::before{
     border: 1px solid var(--color-main);
 }
 
+.dropdown{
+    cursor: pointer;
+    margin-bottom: var(--space-unit)
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    padding: 5px;
+    width: 300px;
+    font-size: var(--text-sm);
+    background-color: var(--color-bg);
+
+    border: 1px solid var(--color-secondary);
+}
+
+.dropdown-content a{
+    display: block;
+    padding-bottom: 5px;
+    transition: .1s ease-in;
+}
+
+.dropdown-content a:hover{
+    background-color: var(--color-secondary-shadow);
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.arrow{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid var(--color-secondary);
+    border-right: 2px solid var(--color-secondary);
+}
+
+.arrow-right{
+    transform: rotate(45deg);
+}
+
 .lotos-tag{
     position: fixed;
     bottom: 50px;
     right: 50px;
-    cursor: default;
+    cursor: pointer;
     display: none; 
     z-index: 100500;
 }
@@ -94,6 +137,10 @@ h2{
     margin: 0 0;
 }
 
+h6{
+    margin: 0;
+}
+
 /* SVG */
 
 svg line{
@@ -101,12 +148,22 @@ svg line{
     stroke: var(--color-secondary);
 }
 
-.ava.move-border line.top, .slide-ava line.bottom{
+.ava.move-border line.top, .ava.move-border line.bottom{
     stroke-dasharray: 35% 65%;
 }
 
-.ava.move-border line.right, .slide-ava line.left{
+.ava.move-border line.right, .ava.move-border line.left{
     stroke-dasharray: 60%;
+}
+
+/* Helpers */
+
+.w-100{
+    width: 100%;
+}
+
+.mb-0{
+    margin-bottom: 0;
 }
 
 /* First slide */
@@ -137,6 +194,10 @@ svg line{
     font-size: var(--text-md);
 }
 
+button.last{
+    margin: 20px auto 0 auto;
+}
+
 /* Main */
 
 main{
@@ -151,7 +212,7 @@ main{
 
 main > *{
     z-index: 10;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 main:after{
@@ -190,37 +251,16 @@ aside{
 
 article{
     width: 100%;
-    background-color: var(--color-bgl2);
+    background-color: var(--color-bg);
 }
 
 .aside-ava{
     position: relative;
-    width: 240px;
-    height: 320px;
+    width: 210px;
+    height: 280px;
     padding: 20px;
-    border: 1px solid var(--color-secondary);
-}
-
-.aside-ava::after{
-    content: '';
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    top: -2px;
-    left: -2px;
-    background-color: var(--color-bg);
-    /* z-index: 0; */
-}
-
-.aside-ava::before{
-    content: '';
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    bottom: -2px;
-    right: -2px;
-    background-color: var(--color-bg);
-    /* z-index: 0; */
+    margin: auto;
+    /* border: 1px solid var(--color-secondary); */
 }
 
 .aside-ava img{
@@ -229,13 +269,81 @@ article{
     height: 100%;
 }
 
+.main-list{
+    width: 90%;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+
+.main-list li{
+    margin: 10px 0;
+}
+
 .aside-ava > *{
     z-index: 10;
 }
 
-.skills{
-    height: 2000px;
+.aside-nav{
+    position: sticky;
+    align-self: flex-start;
+    /* flex: auto; */
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    top: 0;
+}
 
+.aside-nav a{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(-180deg);
+    padding: 5px;
+    margin-top: 5px;
+    /* border-left: 1px solid var(--color-secondary); */
+    border-top: 1px solid var(--color-secondary);
+}
+
+article section{
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-secondary-shadow);
+    border-radius: 5px;
+}
+
+section h2{
+    margin-bottom: 25px;
+}
+
+.timeline{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+
+.event{
+    width: 45%;
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    color: var(--color-main);
+    background-color: var(--color-bg);
+    padding: 0 10px;
+}
+
+.event.right{
+    align-self: flex-end;
+}
+
+.event.left{
+    align-self: flex-start;
+    text-align: end;
+}
+
+.skills h4{
+    text-align: center;
 }
 
 /* Mobil */
@@ -260,6 +368,18 @@ article{
 
     .in-shadow, .in-darkness{
         opacity: 1;
+    }
+
+    aside{
+        display: none;
+    }
+
+    .timeline p{
+        font-size: var(--text-xs);
+    }
+
+    .main-list li{
+        font-size: var(--text-sm);
     }
 }
 
@@ -300,6 +420,18 @@ article{
         width: 100%;
         margin: auto;
     }
+
+    .timeline p{
+        font-size: var(--text-sm);
+    }
+
+    aside{
+        display: none;
+    }
+
+    .main-list li{
+        font-size: var(--text-md);
+    }
   }
   
   @media (min-width: 767.98px){
@@ -328,11 +460,23 @@ article{
     .lotos-tag{
         display: initial;
     }
+
+    aside{
+        display: block;
+    }
+
+    .main-list li{
+        font-size: var(--text-xs);
+    }
   }
   
   @media (min-width: 991.98px) {
     .slide h2{
         font-size: var(--text-xxl);
+    }
+
+    .timeline p{
+        font-size: var(--text-md);
     }
   }
   
@@ -347,5 +491,9 @@ article{
 
     .slide-nav{
         width: 80%;
+    }
+
+    .main-list li{
+        font-size: var(--text-base-size);
     }
   }

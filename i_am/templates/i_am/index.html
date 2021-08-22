@@ -7,8 +7,8 @@
 {% endblock  %}
 
 {% block content %}
-    <footer class="first-view">
-        <!-- {% include './block/preloader.html' %}  -->
+    <header class="first-view">
+        {% include './block/preloader.html' %} 
         <div class="container-slide slide">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -31,26 +31,154 @@
                             <nav class="slide-nav">
                                 <button class="in-darkness"><a href="">Портфолио</a></button>
                                 <button class="in-darkness"><a href="">Навыки</a></button>
-                                <button class="fade-in"><a href="">Не кликай!</a></button>
+                                <button class="in-darkness"><a href="">Резюме</a></button>
+                                <button class="fade-in last"><a href="">Не кликай!</a></button>
                             </nav>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lotos-tag in-darkness">
+        <a href="#" class="lotos-tag in-darkness">
             <div class="designed-by">Designed by</div>
             <div class="black-lotos"><span class="black">Black</span> <span class="lotos">Lotos</span></div>
-        </div>
-    </footer>
-    <main class="in-darkness border-out">
+        </a>
+    </header>
+    <main class="in-shadow border-out">
         <aside>
-            <figure class="aside-ava in-shadow">
-                <img src="{% static './img/ava-cool.jpg' %}" alt="">
+            <figure class="aside-ava ava move-border in-shadow">
+                <svg width="100%" height="100%">
+                    <image xlink:href="{% static './img/ava-cool.jpg' %}" height="90%" width="90%" x="5%" y="5%" />
+                    <line class="top" x1="0%" y1="0%" x2="300%" y2="0%"/>
+                    <line class="right" x1="100%" y1="100%" x2="100%" y2="-300%"/>
+                    <line class="bottom" x1="100%" y1="100%" x2="-100%" y2="100%"/>
+                    <line class="left" x1="0%" y1="0%" x2="0%" y2="400%"/>
+                </svg>
             </figure>
+            <ul class="main-list">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <li>ФИО:</li>
+                        <li>Телефон:</li>
+                        <li>Почта:</li>
+                        <li>telegram:</li>
+                        <li>vk:</li>
+                        <li>github:</li>
+                        <li>Город:</li>
+                    </div>
+                    <div class="col-xs-9">
+                        <li class="in-shadow">Воронин Максим Андреевич</li>
+                        <li class="in-shadow"><a href="tel:+7-901-201-62-28">8-901-201-62-28</a></li>
+                        <li class="in-shadow"><a href="mailto: voronin.maksim.2000@gmail.com">voronin.maksim.2000@gmail.com</a></li>
+                        <li class="in-shadow"><a href="https://t.me/cryptodeputat">@cryptodeputat</a></li>
+                        <li class="in-shadow"><a href="https://vk.com/maximillllian">vk.com/maximillllian</a></li>
+                        <li class="in-shadow"><a href="https://github.com/Maximillllian">Maximillllian</a></li>
+                        <li class="in-shadow">Екатеринбург</li>
+                    </div>
+                </div>
+            </ul>
         </aside>
+        <ul class="aside-nav">
+            <li class="in-shadow"><a href="#Навыки">Навыки</a></li>
+            <li class="in-shadow"><a href="">Портфолио</a></li>
+            <li class="in-shadow"><a href="#Образование">Образование</a></li>
+        </ul>
         <article>
-            <section class="skills">
-                ХЕЙ ХЕЙ ЙОУ
+            <section class="roadmap" id="Образование">
+                <h2>Образование</h2>
+                <div class="timeline">
+                    <div class="event left">
+                        <h4>УИУ РАНХиГС</h4>
+                        <p>2018-2022</p>
+                        <div class="in-shadow dropdown">Государственное и муниципальное управление</div>
+                    </div>
+                    <div class="event right">
+                        <h4 class="mb-0">Python-разработчик</h4>
+                        <h6>stepik.com</h6>
+                        <p>2018-2021</p>
+                        <div class="in-shadow dropdown">Клик<i class="arrow arrow-right"></i>
+                            <div class="dropdown-content">
+                                <a href="https://stepik.org/cert/213327">Python: основы</a>
+                                <a href="https://stepik.org/cert/203580">Программирование на Python</a>
+                                <a href="https://stepik.org/cert/686102">Python в примерах и задачах</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event left">
+                        <h4 class="mb-0">DataScience</h4>
+                        <h6>stepik.com</h6>
+                        <p>2018-2021</p>
+                        <div class="in-shadow dropdown">Клик<i class="arrow arrow-right"></i>
+                            <div class="dropdown-content">
+                                <a href="https://stepik.org/cert/284309">Введение в DataScience</a>
+                                <a href="https://stepik.org/cert/208624">Основы статистики</a>
+                                <a href="https://stepik.org/cert/373973">Основы статистики. Часть 2</a>
+                                <a href="https://stepik.org/cert/329007">Анализ данных в R</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event right">
+                        <h4 class="mb-0">ODS Course</h4>
+                        <p>2021</p>
+                        <div class="in-shadow dropdown">Machine Learning</i>
+                        </div>
+                    </div>
+                    <div class="event left">
+                        <h4 class="mb-0">Веб-разработка</h4>
+                        <h6>stepik.com</h6>
+                        <p>2021</p>
+                        <div class="in-shadow dropdown">Клик<i class="arrow arrow-right"></i>
+                            <div class="dropdown-content">
+                                <a href="https://stepik.org/cert/1044572">HTML и CSS</a>
+                                <a href="https://stepik.org/cert/1061285">JavaScript</a>
+                                <a href="https://stepik.org/cert/809461">Автоматизация тестирования Selenium</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="skills" id="Навыки">
+                <h2>Навыки</h2>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h4>DataScience</h4>
+                            <ul class="main-list">
+                                <div class="row top-xs">
+                                    <div class="col-xs-4">
+                                        <li>Инструменты:</li>
+                                        <li>Библиотеки:</li>
+                                        <li>&#8203;</li>
+                                        <li>Алгоритмы:</li>
+                                        <li>&#8203;</li>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <li class="in-shadow">Python, SQL</li>
+                                        <li class="in-shadow">scikit-learn, XGBoost, pandas, numpy, matplotlib, seaborn</li>
+                                        <li class="in-shadow">RandomForest, DecisionTree, XGBoost, Linear regression, Logistic Regression</li>
+                                        <li class="in-shadow"></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>          
+                        <div class="col-xs-12 col-md-6">
+                            <h4>Веб-разработка</h4>
+                            <ul class="main-list">
+                                <div class="row top-xs">
+                                    <div class="col-xs-4">
+                                        <li>Инструменты:</li>
+                                        <li>Библиотеки:</li>
+                                        <li>CSS frameworks:</li>
+                                        <li>&#8203;</li>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <li class="in-shadow">HTML5, CSS3, JavaScript, Python, SQL</li>
+                                        <li class="in-shadow">JQuery, Django, Selenium WebDriver</li>
+                                        <li class="in-shadow">Bootstrap, flexboxgrid2</li>
+                                        <li class="in-shadow"></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
             </section>
         </article>
     </main>
