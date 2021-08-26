@@ -8,7 +8,7 @@
 
 {% block content %}
     <header class="first-view">
-        {% include './block/preloader.html' %} 
+        <!-- {% include './block/preloader.html' %}  -->
         <div class="container-slide slide">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -29,8 +29,8 @@
                     <div class="slide-description">
                         <h2>Привет! <br> Меня зовут Макс, я занимаюсь аналитикой, машинным обучением, версткой сайтов и музыкой.</h2>
                             <nav class="slide-nav">
+                                <button class="in-darkness"><a href="#ОбоМне">Обо мне</a></button>
                                 <button class="in-darkness"><a href="">Портфолио</a></button>
-                                <button class="in-darkness"><a href="">Навыки</a></button>
                                 <button class="in-darkness"><a href="">Резюме</a></button>
                                 <button class="fade-in last"><a href="">Не кликай!</a></button>
                             </nav>
@@ -43,7 +43,7 @@
             <div class="black-lotos"><span class="black">Black</span> <span class="lotos">Lotos</span></div>
         </a>
     </header>
-    <main class="in-shadow border-out">
+    <main class="in-shadow border-out" id="ОбоМне">
         <aside>
             <figure class="aside-ava ava move-border in-shadow">
                 <svg width="100%" height="100%">
@@ -54,33 +54,27 @@
                     <line class="left" x1="0%" y1="0%" x2="0%" y2="400%"/>
                 </svg>
             </figure>
-            <ul class="main-list">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <li>ФИО:</li>
-                        <li>Телефон:</li>
-                        <li>Почта:</li>
-                        <li>telegram:</li>
-                        <li>vk:</li>
-                        <li>github:</li>
-                        <li>Город:</li>
-                    </div>
-                    <div class="col-xs-9">
-                        <li class="in-shadow">Воронин Максим Андреевич</li>
-                        <li class="in-shadow"><a href="tel:+7-901-201-62-28">8-901-201-62-28</a></li>
-                        <li class="in-shadow"><a href="mailto: voronin.maksim.2000@gmail.com">voronin.maksim.2000@gmail.com</a></li>
-                        <li class="in-shadow"><a href="https://t.me/cryptodeputat">@cryptodeputat</a></li>
-                        <li class="in-shadow"><a href="https://vk.com/maximillllian">vk.com/maximillllian</a></li>
-                        <li class="in-shadow"><a href="https://github.com/Maximillllian">Maximillllian</a></li>
-                        <li class="in-shadow">Екатеринбург</li>
-                    </div>
-                </div>
-            </ul>
+            <div class="contacts-list">
+                <div>ФИО:</div>
+                <div class="in-shadow">Воронин Максим Андреевич</div>
+                <div>Телефон:</div>
+                <div class="in-shadow"><a href="tel:+7-901-201-62-28">8-901-201-62-28</a></div>
+                <div>Почта:</div>
+                <div class="in-shadow"><a href="mailto: voronin.maksim.2000@gmail.com">voronin.maksim.2000@gmail.com</a></div>
+                <div>telegram:</div>
+                <div class="in-shadow"><a href="https://t.me/cryptodeputat">@cryptodeputat</a></div>
+                <div>vk:</div>
+                <div class="in-shadow"><a href="https://vk.com/maximillllian">vk.com/maximillllian</a></div>
+                <div>github:</div>
+                <div class="in-shadow"><a href="https://github.com/Maximillllian">Maximillllian</a></div>
+                <div>Город:</div>
+                <div class="in-shadow">Екатеринбург</div>
+            </div>
         </aside>
         <ul class="aside-nav">
-            <li class="in-shadow"><a href="#Навыки">Навыки</a></li>
-            <li class="in-shadow"><a href="">Портфолио</a></li>
             <li class="in-shadow"><a href="#Образование">Образование</a></li>
+            <li class="in-shadow"><a href="#Навыки">Навыки</a></li>
+            <li class="in-shadow"><a href="#Портфолио">Портфолио</a></li>
         </ul>
         <article>
             <section class="roadmap" id="Образование">
@@ -141,44 +135,90 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <h4>DataScience</h4>
-                            <ul class="main-list">
-                                <div class="row top-xs">
-                                    <div class="col-xs-4">
-                                        <li>Инструменты:</li>
-                                        <li>Библиотеки:</li>
-                                        <li>&#8203;</li>
-                                        <li>Алгоритмы:</li>
-                                        <li>&#8203;</li>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <li class="in-shadow">Python, SQL</li>
-                                        <li class="in-shadow">scikit-learn, XGBoost, pandas, numpy, matplotlib, seaborn</li>
-                                        <li class="in-shadow">RandomForest, DecisionTree, XGBoost, Linear regression, Logistic Regression</li>
-                                        <li class="in-shadow"></li>
-                                    </div>
-                                </div>
-                            </ul>
+                            <div class="skills-list">
+                                <div>Инструменты:</div>
+                                <div class="in-shadow">Python, SQL</div>
+                                <div>Библиотеки:</div>
+                                <div class="in-shadow">scikit-learn, XGBoost, pandas, numpy, matplotlib, seaborn</div>
+                                <div>Алгоритмы:</div>
+                                <div class="in-shadow">RandomForest, DecisionTree, XGBoost, Linear regression, Logistic Regression</div>
+                            </div>
                         </div>          
                         <div class="col-xs-12 col-md-6">
                             <h4>Веб-разработка</h4>
-                            <ul class="main-list">
-                                <div class="row top-xs">
-                                    <div class="col-xs-4">
-                                        <li>Инструменты:</li>
-                                        <li>Библиотеки:</li>
-                                        <li>CSS frameworks:</li>
-                                        <li>&#8203;</li>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <li class="in-shadow">HTML5, CSS3, JavaScript, Python, SQL</li>
-                                        <li class="in-shadow">JQuery, Django, Selenium WebDriver</li>
-                                        <li class="in-shadow">Bootstrap, flexboxgrid2</li>
-                                        <li class="in-shadow"></li>
-                                    </div>
-                                </div>
+                            <div class="skills-list">
+                                <div>Инструменты:</div>
+                                <div class="in-shadow">HTML5, CSS3, JavaScript, Python, SQL</div>
+                                <div>Библиотеки:</div>
+                                <div class="in-shadow">JQuery, Django, Selenium WebDriver</div>
+                                <div>CSS frameworks:</div>
+                                <div class="in-shadow">Bootstrap, flexboxgrid2</div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="portfolio" id="Портфолио">
+                <header>
+                    <h2>Потрфолио</h2>
+                    <button class="in-darkness"><a href="">Подробнее</a></button>
+                </header>
+                <div class="portfolio-block">
+                    <h3>Анализ заседаний в Государственной Думе за 2016-2021 гг.</h3>
+                    <div class="project-description">
+                        <div>Какие задачи?</div>
+                        <div class="in-shadow">
+                            <ul class="m-0">
+                                <li>
+                                    Собрать данные с сайта <a href="http://vote.duma.gov.ru/">vote.duma.gov.ru</a> о каждом заседании 7 созыва
+                                    (около 20.000 заседаний);
+                                </li>
+                                <li>
+                                    Посмотреть на статистику (посещаемость заседаний депутатами каждой партии,
+                                    зависимость принятия закона и времени/даты заседания);
+                                </li>
+                                <li>
+                                    Построить модели машинного обучения, предсказывающие, будет принят закон или нет;
+                                </li>
+                            </ul>
+                        </div>
+                        <div>Какие инструменты?</div>
+                        <div class="in-shadow">
+                            <ul class="m-0">
+                                <li>BeautifulSoup4 - для парсинга данных</li>
+                                <li>Pandas - работа с данными</li>
+                                <li>Seaborn, Matplotlib - визуализация</li>
+                                <li>Scikit-learn - алгоритмы машинного обучения</li>
+                            </ul>
+                        </div>
+                        <div>Ссылка на ноутбук:</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="portfolio-block">
+                    <h3>Сайт-портфолио</h3>
+                    <div class="project-description">
+                        <div>Какие задачи?</div>
+                        <div class="in-shadow">
+                            <ul class="m-0">
+                                <li>С нуля создать личный сайт, где будет размещена информация обо мне и мои проекты</li>
+                            </ul>
+                        </div>
+                        <div>Какие инструменты?</div>
+                        <div class="in-shadow">
+                            <ul class="m-0">
+                                <li>HTML, CSS - разметка страницы и дизайн</li>
+                                <li>JavaScript - некоторые анимации</li>
+                                <li>Django - движок сайта. Зачем нужен на статичном сайте? Для создания шаблонов (в частности футера) и тренировки</li>
+                            </ul>
+                        </div>
+                        <div>Ссылка на сайт:</div>
+                        <div class="in-shadow">
+                            <ul class="m-0">
+                                <li>Вы находитесь на этом сайте:) Но на всякий случай <a href="https://maximillllian.pythonanywhere.com/" class="void-button">КЛИК</a></li>
                             </ul>
                         </div>
                     </div>
+                </div>
             </section>
         </article>
     </main>

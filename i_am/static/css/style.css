@@ -120,6 +120,14 @@ button::before{
     transform: rotate(45deg);
 }
 
+.void-button{
+    border: 1px solid var(--color-secondary);
+    border-radius: 3px;
+    background-color: transparent;
+    color: var(--color-main);
+    padding: 2px 5px;
+}
+
 .lotos-tag{
     position: fixed;
     bottom: 50px;
@@ -166,6 +174,14 @@ svg line{
     margin-bottom: 0;
 }
 
+.m-0{
+    margin: 0;
+}
+
+.p-0{
+    padding: 0;
+}
+
 /* First slide */
 
 .first-view{
@@ -207,7 +223,6 @@ main{
     margin: 0 20px;
     /* padding: 20px 0; */
     border: 2px solid var(--color-secondary);
-    height: 3000px;
 }
 
 main > *{
@@ -239,6 +254,20 @@ main:before{
     z-index: 0;
 }
 
+article section{
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-secondary-shadow);
+    border-radius: 5px;
+}
+
+section h2{
+    margin-bottom: 25px;
+}
+
+/* ASIDE */
+
 aside{
     position: sticky;
     position: -webkit-sticky;
@@ -269,15 +298,11 @@ article{
     height: 100%;
 }
 
-.main-list{
-    width: 90%;
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-}
-
-.main-list li{
-    margin: 10px 0;
+.contacts-list{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+    margin: 10px;
 }
 
 .aside-ava > *{
@@ -300,21 +325,11 @@ article{
     transform: rotate(-180deg);
     padding: 5px;
     margin-top: 5px;
-    /* border-left: 1px solid var(--color-secondary); */
+    border-left: 1px solid var(--color-secondary);
     border-top: 1px solid var(--color-secondary);
 }
 
-article section{
-    margin: 0 0 20px 0;
-    padding: 10px;
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-secondary-shadow);
-    border-radius: 5px;
-}
-
-section h2{
-    margin-bottom: 25px;
-}
+/* Education */
 
 .timeline{
     display: flex;
@@ -342,9 +357,44 @@ section h2{
     text-align: end;
 }
 
+/* SKILLS */
+
 .skills h4{
     text-align: center;
 }
+
+.skills-list{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+    margin: 10px;
+}
+
+/* PORTFOLIO */
+
+.portfolio header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portfolio-block{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid var(--color-secondary-shadow);
+    border-radius: 5px;
+}
+
+.project-description{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+}
+
+.portfolio h3{
+    margin: 0 0 30px 0;
+}
+
 
 /* Mobil */
 
@@ -468,6 +518,14 @@ section h2{
     .main-list li{
         font-size: var(--text-xs);
     }
+
+    .contacts-list{
+        font-size: var(--text-xs);
+    }
+
+    .skills-list{
+        font-size: var(--text-xs);
+    }
   }
   
   @media (min-width: 991.98px) {
@@ -478,6 +536,15 @@ section h2{
     .timeline p{
         font-size: var(--text-md);
     }
+
+    .main-list.skills li{
+        font-size: var(--text-xs);
+    }
+
+    .main-list li{
+        font-size: var(--text-xs);
+    }
+    
   }
   
   @media (min-width: 1199.98px){
@@ -493,7 +560,11 @@ section h2{
         width: 80%;
     }
 
-    .main-list li{
+    .contacts-list{
+        font-size: var(--text-base-size);
+    }
+
+    .skills-list{
         font-size: var(--text-base-size);
     }
   }
