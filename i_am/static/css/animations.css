@@ -75,21 +75,23 @@ button:hover::before{
 /* Анимация появляющегося текста на кнопке. Это обычная анимация появления 
 границ у кнопки, только текст по z-index находится под кнопкой. Плюс пропадают границы */
 
-button.fade-in{
+.fade-in{
+    z-index: 1;
     transition: all .6s ease-out;
 }
 
-button.fade-in{
-
-    z-index: 1;
-}
-
-button.fade-in *{
+.fade-in *{
     z-index: 0;
+    opacity: 0;
+    transition: all .6s ease-out;
 }
 
-button.fade-in:hover{
+.fade-in:hover {
     border: 1px solid var(--color-bg);
+}
+
+.fade-in:hover *{
+    opacity: 1;
 }
 
 /* Анимация границ main */

@@ -29,10 +29,10 @@
                     <div class="slide-description">
                         <h2>Привет! <br> Меня зовут Макс, я занимаюсь аналитикой, машинным обучением, версткой сайтов и музыкой.</h2>
                             <nav class="slide-nav">
-                                <button class="in-darkness"><a href="#ОбоМне">Обо мне</a></button>
-                                <button class="in-darkness"><a href="">Портфолио</a></button>
-                                <button class="in-darkness"><a href="">Резюме</a></button>
-                                <button class="fade-in last"><a href="">Не кликай!</a></button>
+                                <a href="#ОбоМне"><button class="in-darkness"><span>Обо мне</span></button></a>
+                                <a href=""><button class="in-darkness"><span>Портфолио</span></button>
+                                <a href=""><button class="in-darkness"><span>Резюме</span></button></a>
+                                <button class="fade-in last"><a href="" class="">Не кликай!</a></button>
                             </nav>
                     </div>
                 </div>
@@ -214,7 +214,10 @@
                         <div>Ссылка на сайт:</div>
                         <div class="in-shadow">
                             <ul class="m-0">
-                                <li>Вы находитесь на этом сайте:) Но на всякий случай <a href="https://maximillllian.pythonanywhere.com/" class="void-button">КЛИК</a></li>
+                                <li>
+                                    Вы находитесь на этом сайте:) Но на всякий случай 
+                                    <a href="https://maximillllian.pythonanywhere.com/" class="void-button">КЛИК</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -222,6 +225,24 @@
             </section>
         </article>
     </main>
+    <footer>
+        <div class="inspiration">
+            <h4 class="in-darkness">Дизайн вдохновлен:</h4>
+            <ul>
+                <li class="in-darkness"><a href="https://czg.vercel.app/">CSS Zen Garden</a></li>
+                <li class="in-darkness"><a href="https://stylestage.dev/styles/">StyleStage</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <a href="https://www.instagram.com/black_voro/" class="in-darkness">
+                <img src="{% static './img/instagram.svg' %}" alt="" id="insta">
+            </a>
+            <a href="https://vk.com/maximillllian" class="in-darkness">
+                <img src="{% static './img/vk.svg' %}" alt="" id="vk">
+            </a>
+        </div>
+        <img src="{% static './img/lindemann.png' %}" alt="" class="in-darkness hero">
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
             $(document).ready(function() {
