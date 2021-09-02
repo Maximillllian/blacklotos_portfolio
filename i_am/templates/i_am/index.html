@@ -4,9 +4,11 @@
 {% block title %}Black, black Lotos...{% endblock  %}
 {% block links %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/white_noise.css' %}">
 {% endblock  %}
 
 {% block content %}
+    {% include './block/white_noise.html' %}
     <header class="first-view">
         <!-- {% include './block/preloader.html' %}  -->
         <div class="container-slide slide">
@@ -32,7 +34,7 @@
                                 <a href="#ОбоМне"><button class="in-darkness"><span>Обо мне</span></button></a>
                                 <a href=""><button class="in-darkness"><span>Портфолио</span></button>
                                 <a href=""><button class="in-darkness"><span>Резюме</span></button></a>
-                                <button class="fade-in last"><a href="" class="">Не кликай!</a></button>
+                                <button class="fade-in last noise_button"><a class="">Не кликай!</a></button>
                             </nav>
                     </div>
                 </div>
@@ -243,13 +245,23 @@
         </div>
         <img src="{% static './img/lindemann.png' %}" alt="" class="in-darkness hero">
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>
-            $(document).ready(function() {
-            window.onload = function () {
-            $('.container-preloader').delay(3000).fadeOut(1000, function(){ $('.container-preloader').remove(); } );
-            }
-            });
-    </script>
 
+    <svg id="svg_noise">
+        <filter id="filter_noise">
+            <feTurbulence type="turbulence" baseFrequency="0 0" numOctaves="1" result="warp" />
+            <feDisplacementMap scale="60" in="sourceGraphic" in="warp" />
+        </filter>
+    </svg>
+{% endblock  %}
+
+
+{% block scripts %}
+<script src="{% static './js/white_noise.js' %}"></script>
+<script>
+        $(document).ready(function() {
+        window.onload = function () {
+        $('.container-preloader').delay(3000).fadeOut(1000, function(){ $('.container-preloader').remove(); } );
+        }
+        });
+</script>
 {% endblock  %}

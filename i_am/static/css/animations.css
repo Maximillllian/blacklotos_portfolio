@@ -127,3 +127,77 @@ main:hover::before{
 .border-out:hover{
     border: 2px solid var(--color-bg);
 }
+
+/* движущаяся scanline на странице в терминале  */
+
+.scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 100vw;
+    background: linear-gradient(180deg, transparent 0, snow 50%, #64ff64 0, transparent);
+    opacity: 0.05;
+    animation: scanline 1.25s linear infinite;
+}
+
+@keyframes scanline {
+    from{
+        top: 0;
+    }
+    to {
+        top: 100vh;
+    }
+}
+
+/* Анимация искривления (skew) */
+
+.terminal {
+    animation: skew 5s linear infinite
+}
+
+@keyframes skew {
+    0% {
+        transform: skewX(.5deg)
+    }
+
+    8% {
+        transform: skewX(1deg) scale(1.0001)
+    }
+
+    15% {
+        transform: skewX(.6deg) skewY(-.05deg) 
+    }
+
+    30% {
+        transform: skewX(.6deg)
+    }
+
+    50% {
+        transform: scale(1.005deg)
+    }
+
+    100%{
+        transform: skewX(.1deg)
+    }
+}
+
+/* Анимация подсветки терминала (glow) */
+
+body {
+    animation: glow 2s linear infinite 
+}
+
+@keyframes glow {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .7
+    }
+
+    100% {
+        opacity: 1
+    }
+}

@@ -6,4 +6,7 @@ class MainView(View):
     def get(self, request):
         return render(request, 'i_am/index.html')
 
-# Create your views here.
+class OldView(View):
+
+    def get(self, request):
+        return render(request, 'i_am/old_terminal.html')

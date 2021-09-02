@@ -15,7 +15,8 @@
 body{
     font-family: 'Montserrat', sans-serif;
     color: var(--color-main);
-    background-color: var(--color-bg);    
+    background-color: var(--color-bg);   
+    overflow-x: hidden; 
 }
 
 .container-slide{
